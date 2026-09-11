@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TERREX | Powering a Cleaner Tomorrow — Utility Solar, EPC & Clean Energy Investments</title>
+  
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description" content="TERREX is an integrated clean-energy infrastructure firm specializing in utility-scale solar power, turn-key EPC, project origination, and institutional clean-energy investments.">
+  <meta name="keywords" content="TERREX, solar power, renewable energy, EPC contractor, clean energy investment, utility solar, project development, commercial solar, decarbonization, ESG">
+  <meta property="og:title" content="TERREX | Powering a Cleaner Tomorrow">
+  <meta property="og:description" content="Institutional-grade solar development, EPC execution, and capital structuring for global clean-energy infrastructure.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#070B10">
+
+  <!-- Tailwind CSS CDN with custom config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#070B10',
+            slateDark: '#0D141F',
+            slateSurface: '#131E2D',
+            solarGold: {
+              DEFAULT: '#F59E0B',
+              light: '#FDE68A',
+              hover: '#D97706'
+            },
+            cleanEmerald: {
+              DEFAULT: '#10B981',
+              light: '#6EE7B7'
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Design Tokens and Component Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-obsidian text-slate-100 antialiased selection:bg-amber-500 selection:text-slate-950">
+
+  <!-- =========================================================================
+       NAVIGATION BAR (Sticky Glassmorphic Header)
+       ========================================================================= -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-3 group focus-visible:outline-amber-400" aria-label="TERREX Home">
+          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-400 via-amber-500 to-emerald-600 flex items-center justify-center p-0.5 shadow-lg shadow-amber-500/20 group-hover:shadow-amber-500/40 transition-shadow">
+            <div class="w-full h-full bg-obsidian rounded-[7px] flex items-center justify-center">
+              <!-- Geometric Solar Sunburst Icon -->
+              <svg class="w-6 h-6 text-amber-400 transform group-hover:rotate-45 transition-transform duration-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M12 2v2"/>
+                <path d="M12 20v2"/>
+                <path d="m4.93 4.93 1.41 1.41"/>
+                <path d="m17.66 17.66 1.41 1.41"/>
+                <path d="M2 12h2"/>
+                <path d="M20 12h2"/>
+                <path d="m6.34 17.66-1.41 1.41"/>
+                <path d="m19.07 4.93-1.41 1.41"/>
+              </svg>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-extrabold tracking-wider font-heading text-white flex items-center gap-1">
+              TERREX<span class="text-amber-400">.</span>
+            </span>
+            <span class="text-[9px] uppercase tracking-widest text-slate-400 -mt-1 font-semibold">Renewable Energy</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7" aria-label="Primary Navigation">
+          <a href="#solutions" class="nav-link text-sm font-medium text-slate-300 hover:text-amber-400 transition-colors">Solutions</a>
+          <a href="#projects" class="nav-link text-sm font-medium text-slate-300 hover:text-amber-400 transition-colors">Projects</a>
+          <a href="#why-terrex" class="nav-link text-sm font-medium text-slate-300 hover:text-amber-400 transition-colors">Why Terrex</a>
+          <a href="#sustainability" class="nav-link text-sm font-medium text-slate-300 hover:text-amber-400 transition-colors">Sustainability</a>
+          <a href="#partnerships" class="nav-link text-sm font-medium text-slate-300 hover:text-amber-400 transition-colors">Partnerships</a>
+          <a href="#insights" class="nav-link text-sm font-medium text-slate-300 hover:text-amber-400 transition-colors">Insights</a>
+          <a href="#about" class="nav-link text-sm font-medium text-slate-300 hover:text-amber-400 transition-colors">About</a>
+        </nav>
+
+        <!-- Desktop Action CTAs -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="#contact" class="btn-secondary text-xs sm:text-sm py-2 px-4 h-10">
+            <span>Partner With Terrex</span>
+          </a>
+          <a href="#contact" class="btn-primary text-xs sm:text-sm py-2 px-5 h-10">
+            <span>Start a Project</span>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 focus:outline-none focus:ring-2 focus:ring-amber-400" aria-label="Open Navigation Menu" aria-expanded="false">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Overlay Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-xl flex-col justify-between p-6">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-md bg-amber-500 flex items-center justify-center text-slate-950 font-black">T</div>
+          <span class="font-heading font-extrabold text-white text-lg tracking-wider">TERREX</span>
+        </div>
+        <button id="mobile-menu-close" type="button" class="p-2 rounded-lg text-slate-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-amber-400" aria-label="Close Navigation Menu">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col gap-4 py-8 text-lg font-heading font-medium">
+        <a href="#solutions" class="mobile-nav-link text-slate-200 hover:text-amber-400 py-2">Solutions</a>
+        <a href="#projects" class="mobile-nav-link text-slate-200 hover:text-amber-400 py-2">Projects</a>
+        <a href="#why-terrex" class="mobile-nav-link text-slate-200 hover:text-amber-400 py-2">Why Terrex</a>
+        <a href="#sustainability" class="mobile-nav-link text-slate-200 hover:text-amber-400 py-2">Sustainability</a>
+        <a href="#partnerships" class="mobile-nav-link text-slate-200 hover:text-amber-400 py-2">Partnerships</a>
+        <a href="#insights" class="mobile-nav-link text-slate-200 hover:text-amber-400 py-2">Insights</a>
+        <a href="#about" class="mobile-nav-link text-slate-200 hover:text-amber-400 py-2">About TERREX</a>
+      </div>
+      <div class="flex flex-col gap-3 pt-6 border-t border-slate-800">
+        <a href="#contact" class="btn-primary w-full text-center py-3">Start a Project</a>
+        <a href="#contact" class="btn-secondary w-full text-center py-3">Partner With Terrex</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         1. HERO SECTION (Commanding, Institutional, Dynamic Metric Strip)
+         ========================================================================= -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden bg-grid-pattern">
+      <!-- Background Ambient Glow & Solar Field Imagery -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=2000&q=80" 
+          alt="Expansive utility-scale solar photovoltaic array generating clean power under daylight" 
+          class="w-full h-full object-cover object-center opacity-25 filter brightness-75 contrast-125 scale-105 transform animate-pulse duration-1000"
+          style="animation-duration: 12s;"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/85 to-obsidian/50"></div>
+        <div class="absolute inset-0 bg-radial-solar pointer-events-none"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center lg:text-left pt-8">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Left Column: Copy & CTAs -->
+          <div class="lg:col-span-8 flex flex-col items-center lg:items-start">
+            
+            <!-- Eyebrow Badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-amber-500/30 text-amber-300 text-xs font-semibold tracking-wide uppercase mb-6 shadow-inner">
+              <span class="status-dot status-dot-gold"></span>
+              <span>Next-Generation Clean Energy Infrastructure</span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08] mb-6">
+              Powering a <br class="hidden sm:inline" />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-emerald-400">
+                Cleaner Tomorrow.
+              </span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl font-normal leading-relaxed mb-10 text-center lg:text-left">
+              TERREX accelerates global decarbonization through institutional-grade <span class="text-white font-medium">utility solar power</span>, turnkey <span class="text-white font-medium">EPC delivery</span>, and bankable <span class="text-white font-medium">clean-energy capital investments</span>.
+            </p>
+
+            <!-- Dual Strong CTAs -->
+            <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+              <a href="#contact" class="btn-primary w-full sm:w-auto text-base py-3.5 px-8 shadow-xl shadow-amber-500/20">
+                <span>Start a Project</span>
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                </svg>
+              </a>
+              <a href="#partnerships" class="btn-secondary w-full sm:w-auto text-base py-3.5 px-8">
+                <span>Partner With Terrex</span>
+                <svg class="w-5 h-5 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Trust Indicator Tags -->
+            <div class="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs text-slate-400 font-medium">
+              <div class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>Institutional Due Diligence</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>Tier-1 Technology Sourcing</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>Full-Lifecycle EPC Guarantee</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Institutional Live Grid Telemetry Card -->
+          <div class="lg:col-span-4 w-full">
+            <div class="glass-panel p-6 sm:p-7 relative border border-slate-700/60 shadow-2xl">
+              <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-5">
+                <div class="flex items-center gap-2">
+                  <span class="status-dot status-dot-active"></span>
+                  <span class="text-xs font-semibold uppercase tracking-wider text-slate-300 font-mono">Portfolio Telemetry</span>
+                </div>
+                <span class="text-[11px] bg-slate-800/80 px-2.5 py-1 rounded text-amber-300 font-mono">LIVE DISPATCH</span>
+              </div>
+
+              <!-- Metrics Stack with Animated Counters -->
+              <div class="space-y-4">
+                <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800/80 flex items-center justify-between">
+                  <div>
+                    <p class="text-xs text-slate-400 uppercase tracking-wide">Total Development Pipeline</p>
+                    <p class="metric-value text-2xl font-bold text-white mt-0.5" data-target-stat="2.8" data-stat-suffix=" GW" data-stat-decimals="1">[X.X GW]</p>
+                  </div>
+                  <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                  </div>
+                </div>
+
+                <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800/80 flex items-center justify-between">
+                  <div>
+                    <p class="text-xs text-slate-400 uppercase tracking-wide">Institutional Capital Deployed</p>
+                    <p class="metric-value text-2xl font-bold text-white mt-0.5" data-target-stat="1.4" data-stat-prefix="$" data-stat-suffix="B+" data-stat-decimals="1">[$X.XB+]</p>
+                  </div>
+                  <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+                  </div>
+                </div>
+
+                <div class="bg-slate-900/60 p-4 rounded-lg border border-slate-800/80 flex items-center justify-between">
+                  <div>
+                    <p class="text-xs text-slate-400 uppercase tracking-wide">Lifetime CO₂ Abatement</p>
+                    <p class="metric-value text-2xl font-bold text-white mt-0.5" data-target-stat="3.6" data-stat-suffix="M Tons" data-stat-decimals="1">[X.XM Tons]</p>
+                  </div>
+                  <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-5 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+                <span class="flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5 text-emerald-400" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                  Grid Stability: 99.98%
+                </span>
+                <span class="text-slate-500">Representative Baseline</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         2. ABOUT SECTION (Corporate Identity, Philosophy, Pillars)
+         ========================================================================= -->
+    <section id="about" class="py-24 bg-slate-950/60 border-t border-b border-slate-900 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- About Visual Collage -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1000&q=80" 
+                alt="High-efficiency photovoltaic cells under blue sky" 
+                class="w-full h-[460px] object-cover object-center filter brightness-90 contrast-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent"></div>
+              
+              <!-- Floating Overlay Badge -->
+              <div class="absolute bottom-6 left-6 right-6 glass-panel p-4 border border-white/10">
+                <p class="text-xs font-semibold text-amber-400 tracking-wider uppercase">Integrated EPC & Capital Model</p>
+                <p class="text-sm text-slate-200 mt-1">Bridging engineering certainty, institutional capital, and long-term asset yield.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- About Text Content -->
+          <div class="lg:col-span-7 flex flex-col justify-center">
+            
+            <div class="badge-solar w-fit mb-4">
+              <span>About TERREX</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-6">
+              Engineering the Backbone of the Global Energy Transition.
+            </h2>
+
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-6">
+              At TERREX, we eliminate the friction between clean-energy ambition and utility-scale reality. By uniting specialized **solar project origination, rigorous turnkey EPC, and structured clean-energy financing** under one roof, we build high-performing, bankable energy assets designed for 30+ year operational lifespans.
+            </p>
+
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed mb-8">
+              We partner with global institutional funds, regional utilities, commercial off-takers, and strategic landowners to convert renewable potential into resilient, high-yield infrastructure.
+            </p>
+
+            <!-- 4 Corporate Pillars -->
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800/80">
+                <div class="w-8 h-8 rounded-md bg-amber-500/10 text-amber-400 flex items-center justify-center font-bold text-sm mb-2">01</div>
+                <h3 class="text-base font-bold text-white mb-1">De-risked Development</h3>
+                <p class="text-xs text-slate-400">Comprehensive site vetting, interconnect modeling, and streamlined permitting frameworks.</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800/80">
+                <div class="w-8 h-8 rounded-md bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-sm mb-2">02</div>
+                <h3 class="text-base font-bold text-white mb-1">Turnkey EPC Precision</h3>
+                <p class="text-xs text-slate-400">Direct procurement of Tier-1 modules, bifacial trackers, and bankable substation integration.</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800/80">
+                <div class="w-8 h-8 rounded-md bg-blue-500/10 text-blue-400 flex items-center justify-center font-bold text-sm mb-2">03</div>
+                <h3 class="text-base font-bold text-white mb-1">Capital Structuring</h3>
+                <p class="text-xs text-slate-400">Institutional tax equity, senior debt, and corporate PPA off-take optimization.</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900/50 border border-slate-800/80">
+                <div class="w-8 h-8 rounded-md bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold text-sm mb-2">04</div>
+                <h3 class="text-base font-bold text-white mb-1">Asset Stewardship</h3>
+                <p class="text-xs text-slate-400">Predictive O&M, SCADA telemetry, and performance warranties protecting asset value.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. SOLUTIONS (Solar Power, Project Development, EPC, Clean Energy Investments)
+         ========================================================================= -->
+    <section id="solutions" class="py-24 relative bg-obsidian">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="badge-solar mx-auto mb-4">
+            <span>Core Capabilities</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+            Comprehensive Clean-Energy Solutions
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg">
+            From greenfield land origination to utility grid interconnection and institutional capital structuring, TERREX delivers end-to-end execution.
+          </p>
+
+          <!-- Interactive Tab Controls -->
+          <div class="mt-8 inline-flex p-1.5 rounded-full bg-slate-900 border border-slate-800 overflow-x-auto max-w-full" role="tablist">
+            <button class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-amber-500/15 text-amber-400 border border-amber-500/40" data-solution-tab="solar" role="tab" aria-selected="true">
+              Solar Power
+            </button>
+            <button class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all text-slate-400 border border-transparent hover:text-white" data-solution-tab="development" role="tab" aria-selected="false">
+              Project Development
+            </button>
+            <button class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all text-slate-400 border border-transparent hover:text-white" data-solution-tab="epc" role="tab" aria-selected="false">
+              Turnkey EPC
+            </button>
+            <button class="px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all text-slate-400 border border-transparent hover:text-white" data-solution-tab="investment" role="tab" aria-selected="false">
+              Clean Investments
+            </button>
+          </div>
+        </div>
+
+        <!-- Solution Panels Container -->
+        <div class="relative">
+          
+          <!-- Panel 1: Solar Power -->
+          <div data-solution-panel="solar" class="glass-panel p-8 sm:p-12 border border-slate-800">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+              <div class="lg:col-span-6">
+                <span class="text-amber-400 text-xs font-mono tracking-wider uppercase font-bold">Vertical 01</span>
+                <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 mb-4">Utility & Commercial Solar Power Generation</h3>
+                <p class="text-slate-300 leading-relaxed mb-6">
+                  TERREX engineers, develops, and operates gigawatt-scale ground-mount arrays and high-capacity commercial distributed solar facilities. We deploy next-generation single-axis tracking and N-type TOPCon bifacial modules for optimal LCOE (Levelized Cost of Electricity).
+                </p>
+                <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                  <li class="flex items-center gap-2.5">
+                    <svg class="w-4 h-4 text-amber-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Utility-scale ground mount (50MW to 500MW+ clusters)</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <svg class="w-4 h-4 text-amber-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Commercial & Industrial (C&I) rooftop and microgrid systems</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <svg class="w-4 h-4 text-amber-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Co-located BESS (Battery Energy Storage Systems) for 24/7 firming</span>
+                  </li>
+                </ul>
+                <a href="#contact" class="btn-primary text-sm py-2.5 px-6">Inquire About Solar Capacity</a>
+              </div>
+              <div class="lg:col-span-6">
+                <div class="rounded-xl overflow-hidden border border-slate-700/60 shadow-2xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1545209567-9321e1a539dc?auto=format&fit=crop&w=1200&q=80" 
+                    alt="Massive solar installation under sun" 
+                    class="w-full h-72 sm:h-96 object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Project Development -->
+          <div data-solution-panel="development" class="glass-panel p-8 sm:p-12 border border-slate-800 hidden">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+              <div class="lg:col-span-6">
+                <span class="text-amber-400 text-xs font-mono tracking-wider uppercase font-bold">Vertical 02</span>
+                <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 mb-4">Greenfield & Brownfield Project Development</h3>
+                <p class="text-slate-300 leading-relaxed mb-6">
+                  Our development team manages the end-to-end origination pipeline from initial landowner engagement, geospatial solar irradiation mapping, and environmental assessments to ISO/RTO grid queue filings and PPA negotiations.
+                </p>
+                <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                  <li class="flex items-center gap-2.5">
+                    <svg class="w-4 h-4 text-amber-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Land acquisition, long-term options & easement structuring</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <svg class="w-4 h-4 text-amber-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Interconnection study management (System Impact & Facilities Studies)</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <svg class="w-4 h-4 text-amber-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Zoning, NEPA/CEQA environmental compliance & local permits</span>
+                  </li>
+                </ul>
+                <a href="#contact" class="btn-primary text-sm py-2.5 px-6">Submit Land or Queue Proposal</a>
+              </div>
+              <div class="lg:col-span-6">
+                <div class="rounded-xl overflow-hidden border border-slate-700/60 shadow-2xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&q=80" 
+                    alt="Renewable land and development project" 
+                    class="w-full h-72 sm:h-96 object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Turnkey EPC -->
+          <div data-solution-panel="epc" class="glass-panel p-8 sm:p-12 border border-slate-800 hidden">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+              <div class="lg:col-span-6">
+                <span class="text-amber-400 text-xs font-mono tracking-wider uppercase font-bold">Vertical 03</span>
+                <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 mb-4">Turnkey Engineering, Procurement & Construction</h3>
+                <p class="text-slate-300 leading-relaxed mb-6">
+                  TERREX delivers certainty of schedule, safety, and performance. As a self-performing EPC contractor, we control the engineering specification, supply chain logistics, and substation/high-voltage construction with zero compromise on quality.
+                </p>
+                <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                  <li class="flex items-center gap-2.5">
+                    <svg class="w-4 h-4 text-amber-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Bespoke civil, structural, and electrical 34.5kV/230kV design</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <svg class="w-4 h-4 text-amber-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Direct Tier-1 OEM bulk procurement contracts (Modules, Inverters, BESS)</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <svg class="w-4 h-4 text-amber-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Full commissioning, hot energization, and performance test certification</span>
+                  </li>
+                </ul>
+                <a href="#contact" class="btn-primary text-sm py-2.5 px-6">Request EPC Consultation</a>
+              </div>
+              <div class="lg:col-span-6">
+                <div class="rounded-xl overflow-hidden border border-slate-700/60 shadow-2xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80" 
+                    alt="High voltage grid transmission infrastructure" 
+                    class="w-full h-72 sm:h-96 object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 4: Clean Investments -->
+          <div data-solution-panel="investment" class="glass-panel p-8 sm:p-12 border border-slate-800 hidden">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+              <div class="lg:col-span-6">
+                <span class="text-amber-400 text-xs font-mono tracking-wider uppercase font-bold">Vertical 04</span>
+                <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1 mb-4">Clean-Energy Capital & Asset Investment</h3>
+                <p class="text-slate-300 leading-relaxed mb-6">
+                  We structure and co-invest alongside institutional capital, sovereign wealth funds, and private infrastructure managers. Our financial engineering unlocks stable, long-term, contracted cash flows backed by investment-grade off-takers.
+                </p>
+                <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                  <li class="flex items-center gap-2.5">
+                    <svg class="w-4 h-4 text-amber-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Tax equity structuring & transferable clean-energy tax credit syndication</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <svg class="w-4 h-4 text-amber-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Construction-to-term non-recourse project debt facilities</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <svg class="w-4 h-4 text-amber-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Yield optimization and asset stewardship for 30+ year hold periods</span>
+                  </li>
+                </ul>
+                <a href="#contact" class="btn-primary text-sm py-2.5 px-6">Explore Investment Partnerships</a>
+              </div>
+              <div class="lg:col-span-6">
+                <div class="rounded-xl overflow-hidden border border-slate-700/60 shadow-2xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80" 
+                    alt="Modern corporate financial architecture" 
+                    class="w-full h-72 sm:h-96 object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. PROJECTS / PORTFOLIO (Representative Case Studies & Filter Matrix)
+         ========================================================================= -->
+    <section id="projects" class="py-24 bg-slate-950/70 border-t border-b border-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div>
+            <div class="badge-solar mb-3">
+              <span>Representative Assets</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              Selected Project Portfolio
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-xl">
+              Representative showcases demonstrating our engineering reach, utility integration, and investment execution across key energy markets.
+            </p>
+          </div>
+
+          <!-- Project Category Filter Buttons -->
+          <div class="flex flex-wrap items-center gap-2" role="group" aria-label="Project Category Filters">
+            <button class="filter-btn active" data-filter="all">All Sectors</button>
+            <button class="filter-btn" data-filter="utility">Utility-Scale</button>
+            <button class="filter-btn" data-filter="ci">C&I Distributed</button>
+            <button class="filter-btn" data-filter="epc-storage">Storage & EPC</button>
+          </div>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Project 1: Utility Solar -->
+          <div class="glass-card overflow-hidden" data-project-category="utility">
+            <div class="project-image-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=800&q=80" 
+                alt="Representative utility-scale solar farm" 
+                loading="lazy"
+              />
+              <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-slate-900/85 text-emerald-400 border border-emerald-500/30 px-2.5 py-1 rounded-full">
+                Operational
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-2 font-mono">
+                <span>[Representative Region Alpha]</span>
+                <span class="text-amber-400 font-bold">[250 MWdc]</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">High-Plains Solar Energy Center</h3>
+              <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+                Turnkey development, single-axis tracker engineering, and 230kV substation integration delivering clean power to regional grid operators.
+              </p>
+              <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Off-taker: [Tier-1 Utility PPA]</span>
+                <span class="text-slate-300 font-semibold">[Scope: Full EPC]</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: C&I Solar -->
+          <div class="glass-card overflow-hidden" data-project-category="ci">
+            <div class="project-image-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1545209567-9321e1a539dc?auto=format&fit=crop&w=800&q=80" 
+                alt="Commercial rooftop photovoltaic facility" 
+                loading="lazy"
+              />
+              <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-slate-900/85 text-emerald-400 border border-emerald-500/30 px-2.5 py-1 rounded-full">
+                Operational
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-2 font-mono">
+                <span>[Metro Logistics Hub]</span>
+                <span class="text-amber-400 font-bold">[35 MWdc Portfolio]</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Omni-Logistics Rooftop Network</h3>
+              <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+                Distributed commercial rooftop solar portfolio across 8 distribution hubs, generating on-site renewable power with virtual net metering.
+              </p>
+              <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Off-taker: [Corporate Fortune 500]</span>
+                <span class="text-slate-300 font-semibold">[Scope: Dev & EPC]</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Solar + BESS Storage -->
+          <div class="glass-card overflow-hidden" data-project-category="utility epc-storage">
+            <div class="project-image-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80" 
+                alt="Solar plus battery energy storage facility" 
+                loading="lazy"
+              />
+              <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-slate-900/85 text-amber-300 border border-amber-500/30 px-2.5 py-1 rounded-full">
+                In Construction
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-2 font-mono">
+                <span>[Western Interconnect Corridor]</span>
+                <span class="text-amber-400 font-bold">[180 MW + 100 MWh BESS]</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">SunPeak Hybrid Storage Hub</h3>
+              <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+                Integrated solar and utility-scale 4-hour battery storage system providing spinning reserve, peak shaving, and frequency response.
+              </p>
+              <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Off-taker: [ISO Resource Adequacy]</span>
+                <span class="text-slate-300 font-semibold">[Scope: EPC & Storage]</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: High Capacity Solar Farm -->
+          <div class="glass-card overflow-hidden" data-project-category="utility">
+            <div class="project-image-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800&q=80" 
+                alt="Bifacial solar technology in desert solar field" 
+                loading="lazy"
+              />
+              <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-slate-900/85 text-blue-400 border border-blue-500/30 px-2.5 py-1 rounded-full">
+                In Development
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-2 font-mono">
+                <span>[Southwest Basin Project]</span>
+                <span class="text-amber-400 font-bold">[400 MWdc]</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Canyon Horizon Solar Farm</h3>
+              <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+                Advanced development phase with executed land options, environmental permits, and interconnection queue position with regional transmission operator.
+              </p>
+              <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Off-taker: [Competitive RFP]</span>
+                <span class="text-slate-300 font-semibold">[Scope: Co-Dev / JV]</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Microgrid / EPC -->
+          <div class="glass-card overflow-hidden" data-project-category="ci epc-storage">
+            <div class="project-image-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80" 
+                alt="Industrial microgrid and substation integration" 
+                loading="lazy"
+              />
+              <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-slate-900/85 text-emerald-400 border border-emerald-500/30 px-2.5 py-1 rounded-full">
+                Operational
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-2 font-mono">
+                <span>[Manufacturing Complex]</span>
+                <span class="text-amber-400 font-bold">[20 MW + Islanding]</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Resilient Manufacturing Microgrid</h3>
+              <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+                High-reliability on-site solar installation equipped with autonomous islanding capabilities, shielding advanced industrial operations from grid outages.
+              </p>
+              <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Off-taker: [Industrial Off-taker]</span>
+                <span class="text-slate-300 font-semibold">[Scope: Turnkey EPC]</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Clean Energy Capital Portfolio -->
+          <div class="glass-card overflow-hidden" data-project-category="utility epc-storage">
+            <div class="project-image-wrap">
+              <img 
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" 
+                alt="Institutional clean energy asset portfolio" 
+                loading="lazy"
+              />
+              <span class="absolute top-3 right-3 text-[11px] font-mono font-bold bg-slate-900/85 text-emerald-400 border border-emerald-500/30 px-2.5 py-1 rounded-full">
+                Operational
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-2 font-mono">
+                <span>[National Aggregation]</span>
+                <span class="text-amber-400 font-bold">[$450M Asset Value]</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Equinox Clean Infrastructure Fund</h3>
+              <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+                Multi-asset institutional yield aggregation with structured tax equity, long-term hedging agreements, and centralized O&M management.
+              </p>
+              <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-mono">
+                <span>Structure: [Tax Equity / Debt]</span>
+                <span class="text-slate-300 font-semibold">[Scope: Asset Mgt]</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Compliance & Placeholder Disclaimer Banner -->
+        <div class="mt-12 p-4 rounded-xl bg-slate-900/70 border border-slate-800 text-center">
+          <p class="text-xs text-slate-400 font-mono">
+            <span class="text-amber-400 font-semibold">Institutional Portfolio Disclosure:</span> Project names, regional locations, and capacities depicted above are representative placeholder references illustrating the scale and scope of TERREX development & EPC capabilities.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. WHY TERREX (Competitive Edge, Engineering Rigor, Lifecycle Timeline)
+         ========================================================================= -->
+    <section id="why-terrex" class="py-24 relative bg-obsidian">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="badge-solar mx-auto mb-4">
+            <span>The Terrex Advantage</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+            Why Capital and Utilities Choose TERREX
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg">
+            Renewable infrastructure demands unyielding engineering rigor, bankability certainty, and lifecycle discipline. Here is how TERREX de-risks clean energy deployment.
+          </p>
+        </div>
+
+        <!-- 5 Core Strategic Value Drivers -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          
+          <div class="glass-card p-8 border border-slate-800">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">De-risked Execution</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              We apply institutional stage-gate risk audits at every phase—from soil geotechnical boring and environmental clearance to interconnection queue modeling.
+            </p>
+          </div>
+
+          <div class="glass-card p-8 border border-slate-800">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-9M14 17H5M17 12H3"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Tier-1 Supply Chain</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Direct master agreements with top BloombergNEF Tier-1 photovoltaic module, inverter, and tracker suppliers eliminate intermediary markups and delivery delays.
+            </p>
+          </div>
+
+          <div class="glass-card p-8 border border-slate-800">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-6">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Bankable Off-take Structuring</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Our origination team structures credit-worthy long-term Power Purchase Agreements (PPAs), contracts for differences (CFDs), and hedges tailored to meet lenders' DSCR requirements.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Interactive 4-Stage Project Lifecycle Roadmap -->
+        <div class="glass-panel p-8 sm:p-12 border border-slate-800">
+          <div class="border-b border-slate-800 pb-4 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <span class="text-xs font-mono uppercase text-amber-400 font-bold">Standard Operating Procedure</span>
+              <h3 class="text-2xl font-bold text-white mt-1">Project Lifecycle Delivery Roadmap</h3>
+            </div>
+            <span class="text-xs text-slate-400 font-mono">Turnkey Execution Certainty</span>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 relative">
+              <div class="text-amber-400 font-mono text-xs font-bold mb-2">PHASE 01</div>
+              <h4 class="text-base font-bold text-white mb-2">Origination & Siting</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">Land qualification, slope analysis, title review, and ISO interconnection queue entry.</p>
+              <div class="mt-4 text-[11px] text-slate-500 font-mono">Duration: [Months 1–6]</div>
+            </div>
+
+            <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 relative">
+              <div class="text-amber-400 font-mono text-xs font-bold mb-2">PHASE 02</div>
+              <h4 class="text-base font-bold text-white mb-2">Permitting & Engineering</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">Civil/structural 30-60-90% design, environmental clearance, and PPA off-take execution.</p>
+              <div class="mt-4 text-[11px] text-slate-500 font-mono">Duration: [Months 6–14]</div>
+            </div>
+
+            <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 relative">
+              <div class="text-amber-400 font-mono text-xs font-bold mb-2">PHASE 03</div>
+              <h4 class="text-base font-bold text-white mb-2">Turnkey EPC Construction</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">BOP mobilization, racking, module installation, medium voltage collection & substation.</p>
+              <div class="mt-4 text-[11px] text-slate-500 font-mono">Duration: [Months 14–22]</div>
+            </div>
+
+            <div class="p-5 rounded-xl bg-slate-900/60 border border-slate-800 relative">
+              <div class="text-amber-400 font-mono text-xs font-bold mb-2">PHASE 04</div>
+              <h4 class="text-base font-bold text-white mb-2">COD & Asset Management</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">Commercial operation date (COD), capacity testing, SCADA integration, and long-term O&M.</p>
+              <div class="mt-4 text-[11px] text-slate-500 font-mono">Duration: [30+ Year Horizon]</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. SUSTAINABILITY & ESG (Interactive Clean Energy Impact Calculator)
+         ========================================================================= -->
+    <section id="sustainability" class="py-24 bg-slate-950/70 border-t border-b border-slate-900 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-16">
+          
+          <div class="lg:col-span-6">
+            <div class="badge-emerald mb-4">
+              <span>ESG Commitment</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-6">
+              Measurable Climate Impact at Institutional Scale.
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-6">
+              Sustainability is not an afterthought at TERREX—it is our primary product. Every megawatt of solar capacity we develop replaces carbon-heavy fossil generation, contributing directly to institutional Scope 1, 2, and 3 decarbonization mandates.
+            </p>
+            <div class="space-y-4 text-sm text-slate-300">
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <span class="font-bold text-white">Biodiversity & Agrisolar Siting:</span> Integrating pollinator-friendly ground cover, native vegetation, and dual-use agrivoltaics where compatible.
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <span class="font-bold text-white">Ethical Supply Chain Compliance:</span> Strict traceability protocols for all polysilicon, metallurgical components, and inverter electronics.
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <span class="font-bold text-white">Circular Lifecycle Stewardship:</span> End-of-life solar panel recycling commitments and decommissioning reserves established at notice to proceed.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Clean Energy Estimator Card -->
+          <div class="lg:col-span-6">
+            <div class="glass-panel p-6 sm:p-8 border border-emerald-500/30 shadow-2xl relative">
+              <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+                <div>
+                  <h3 class="text-lg font-bold text-white">Clean Energy Impact Estimator</h3>
+                  <p class="text-xs text-slate-400">Simulate environmental dividends per project capacity</p>
+                </div>
+                <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2.5 py-1 rounded-full font-mono font-semibold">
+                  ESG MODEL
+                </span>
+              </div>
+
+              <!-- Slider Control -->
+              <div class="mb-8">
+                <div class="flex justify-between items-center mb-3">
+                  <label for="mw-slider" class="text-xs font-semibold uppercase text-slate-300 tracking-wider">Installed Solar Capacity</label>
+                  <span id="display-mw" class="text-xl font-extrabold text-amber-400 font-mono">100 MW</span>
+                </div>
+                <input 
+                  type="range" 
+                  id="mw-slider" 
+                  min="5" 
+                  max="500" 
+                  value="100" 
+                  step="5" 
+                  class="range-slider cursor-pointer"
+                  aria-label="Installed solar capacity slider in Megawatts"
+                />
+                <div class="flex justify-between text-[11px] text-slate-500 font-mono mt-2">
+                  <span>5 MW (Distributed)</span>
+                  <span>250 MW (Utility)</span>
+                  <span>500 MW (Gigawatt Cluster)</span>
+                </div>
+              </div>
+
+              <!-- Real-Time Metrics Output Display -->
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                  <p class="text-[11px] text-slate-400 uppercase tracking-wider">Annual Generation</p>
+                  <p class="text-xl font-bold text-white mt-1 font-mono"><span id="display-mwh">175,000</span> <span class="text-xs text-slate-400 font-normal">MWh/yr</span></p>
+                </div>
+
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                  <p class="text-[11px] text-slate-400 uppercase tracking-wider">CO₂ Abatement</p>
+                  <p class="text-xl font-bold text-emerald-400 mt-1 font-mono"><span id="display-co2">123,725</span> <span class="text-xs text-slate-400 font-normal">Tons/yr</span></p>
+                </div>
+
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                  <p class="text-[11px] text-slate-400 uppercase tracking-wider">Homes Powered</p>
+                  <p class="text-xl font-bold text-white mt-1 font-mono"><span id="display-homes">16,667</span> <span class="text-xs text-slate-400 font-normal">Homes</span></p>
+                </div>
+
+                <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800">
+                  <p class="text-[11px] text-slate-400 uppercase tracking-wider">Estimated Project Value</p>
+                  <p class="text-xl font-bold text-amber-400 mt-1 font-mono"><span id="display-capex">$95.0M</span></p>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-slate-800 text-center">
+                <a href="#contact" class="text-xs font-semibold text-amber-400 hover:text-amber-300 inline-flex items-center gap-1.5 transition-colors">
+                  <span>Request formal site feasibility & energy yield audit</span>
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. PARTNERSHIPS (Institutional Capital, Landowners, Co-Developers)
+         ========================================================================= -->
+    <section id="partnerships" class="py-24 relative bg-obsidian">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="badge-solar mx-auto mb-4">
+            <span>Collaboration Tracks</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4">
+            Strategic Partnerships & Capital Deployment
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg">
+            We structure win-win alignments designed around institutional governance, long-term yield, and community prosperity.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          
+          <!-- Track 1: Institutional Investors -->
+          <div class="glass-card p-8 border border-slate-800 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-6">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Institutional & Tax Equity Investors</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Direct equity co-investment, tax credit monetization, and senior debt participation in ready-to-build (RTB) and operational utility-scale portfolios.
+              </p>
+              <ul class="space-y-2.5 text-xs text-slate-300 mb-6">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Investment-grade off-taker backing</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Transferable clean tax credit monetization</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Tailored debt & equity capital structures</li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn-secondary w-full text-center text-xs py-2.5">Capital Partnership Inquiry</a>
+          </div>
+
+          <!-- Track 2: Landowners -->
+          <div class="glass-card p-8 border border-slate-800 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mb-6">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m2 22 1-1h3l9-9"/><path d="M14 21v-3l9-9"/><path d="m15 6 3-3 3 3-3 3z"/><path d="m9 12 3-3 3 3-3 3z"/></svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Landowners & Agricultural Partners</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Monetize your acreage with guaranteed 30+ year ground lease revenue. We assume 100% of the development, permitting, and engineering costs.
+              </p>
+              <ul class="space-y-2.5 text-xs text-slate-300 mb-6">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Seeking parcels from 100 to 2,000+ acres</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Predictable, inflation-adjusted annual income</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Complete land restoration guarantee at exit</li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn-secondary w-full text-center text-xs py-2.5">Submit Land Parcel for Review</a>
+          </div>
+
+          <!-- Track 3: Co-Developers & Utilities -->
+          <div class="glass-card p-8 border border-slate-800 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-6">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Co-Developers & Regional Utilities</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                Bring projects across the finish line. We provide late-stage development equity, balance of plant EPC execution, and substation interconnection solutions.
+              </p>
+              <ul class="space-y-2.5 text-xs text-slate-300 mb-6">
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Joint development & project buyout frameworks</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Equipment procurement liquidity & backing</li>
+                <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg> Grid firming & interconnection problem-solving</li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn-secondary w-full text-center text-xs py-2.5">Co-Development Inquiry</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. INSIGHTS & PERSPECTIVES (Thought Leadership & Market Research)
+         ========================================================================= -->
+    <section id="insights" class="py-24 bg-slate-950/60 border-t border-b border-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+          <div>
+            <div class="badge-solar mb-3">
+              <span>Energy Intelligence</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              Insights & Market Perspectives
+            </h2>
+          </div>
+          <a href="#contact" class="text-sm font-semibold text-amber-400 hover:text-amber-300 inline-flex items-center gap-1 transition-colors">
+            <span>Subscribe to Executive Brief</span>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          
+          <!-- Article 1 -->
+          <article class="glass-card overflow-hidden flex flex-col justify-between">
+            <div class="p-6 sm:p-7">
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-3 font-mono">
+                <span>RESEARCH PAPER</span>
+                <span>[Q3 Analysis]</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-3 hover:text-amber-400 transition-colors">
+                <a href="#contact">Navigating Interconnection Queues: Risk Mitigation in RTO Cluster Studies</a>
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Strategic engineering frameworks for forecasting network upgrade costs and overcoming transmission capacity constraints in modern renewable clusters.
+              </p>
+            </div>
+            <div class="px-6 sm:px-7 pb-6 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+              <span>TERREX Technical Advisory</span>
+              <span class="text-amber-400 font-semibold">6 min read</span>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="glass-card overflow-hidden flex flex-col justify-between">
+            <div class="p-6 sm:p-7">
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-3 font-mono">
+                <span>CAPITAL MARKETS</span>
+                <span>[Institutional Brief]</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-3 hover:text-amber-400 transition-colors">
+                <a href="#contact">Transferable Tax Credit Pricing & Monetization Under Section 6418</a>
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Evaluating the evolving secondary market for clean energy tax credits: liquidity, indemnity insurance, and corporate balance sheet optimization.
+              </p>
+            </div>
+            <div class="px-6 sm:px-7 pb-6 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+              <span>TERREX Capital Desk</span>
+              <span class="text-amber-400 font-semibold">8 min read</span>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="glass-card overflow-hidden flex flex-col justify-between">
+            <div class="p-6 sm:p-7">
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-3 font-mono">
+                <span>ENGINEERING DEEP DIVE</span>
+                <span>[EPC Perspectives]</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-3 hover:text-amber-400 transition-colors">
+                <a href="#contact">Bifacial Albedo Modeling: Unlocking +14% Energy Yield with Dual-Axis Tracking</a>
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Empirical field data analyzing N-type TOPCon module backside gains across varying terrain, vegetative albedos, and tracker pitch ratios.
+              </p>
+            </div>
+            <div class="px-6 sm:px-7 pb-6 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+              <span>TERREX Systems Engineering</span>
+              <span class="text-amber-400 font-semibold">5 min read</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. CONTACT & LEAD INTAKE (Conversion Hub — Dual Track Form)
+         ========================================================================= -->
+    <section id="contact" class="py-24 relative bg-obsidian">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16">
+          
+          <!-- Contact Left Info Column -->
+          <div class="lg:col-span-5 flex flex-col justify-between">
+            <div>
+              <div class="badge-solar mb-4">
+                <span>Initiate Engagement</span>
+              </div>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-6">
+                Let’s Power Tomorrow, Together.
+              </h2>
+              <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
+                Whether originating a new utility-scale solar project, commissioning turnkey EPC delivery, or structuring capital partnerships, our deal team responds within 24 business hours.
+              </p>
+
+              <!-- Corporate Office Cards -->
+              <div class="space-y-4 mb-8">
+                <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-white">Global Headquarters</h4>
+                    <p class="text-xs text-slate-400 mt-0.5">TERREX Clean Infrastructure Center</p>
+                    <p class="text-xs text-slate-400">[Corporate Address Placeholder • Energy District]</p>
+                  </div>
+                </div>
+
+                <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-white">Direct Deal Desk</h4>
+                    <p class="text-xs text-slate-400 mt-0.5">inquiries@terrex-energy.com [Placeholder]</p>
+                    <p class="text-xs text-slate-400">capital@terrex-energy.com [Placeholder]</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guarantee & SLA Notice -->
+            <div class="p-4 rounded-lg bg-slate-900/40 border border-slate-800/80 text-xs text-slate-400">
+              <span class="text-amber-400 font-semibold">Institutional Due Diligence Notice:</span> All technical documentation, PPA term sheets, and land parcel submissions are protected by strict reciprocal Non-Disclosure Agreements (NDA).
+            </div>
+          </div>
+
+          <!-- Contact Right Form Column -->
+          <div class="lg:col-span-7">
+            <div class="glass-panel p-6 sm:p-10 border border-slate-800 shadow-2xl relative">
+              
+              <!-- Track Switcher (Project vs Partner) -->
+              <div class="mb-8">
+                <div class="flex p-1 rounded-xl bg-slate-900/80 border border-slate-800">
+                  <button type="button" class="w-1/2 py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold transition-all bg-amber-500 text-slate-950" data-contact-track="project">
+                    Start a Project
+                  </button>
+                  <button type="button" class="w-1/2 py-2.5 px-3 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slate-400 hover:text-white" data-contact-track="partner">
+                    Partner / Invest
+                  </button>
+                </div>
+              </div>
+
+              <h3 id="form-track-label" class="text-xl font-bold text-white mb-6">Project Initiation Inquiry</h3>
+
+              <!-- Interactive Form -->
+              <form id="contact-form" class="space-y-4">
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="contact-name" class="block text-xs font-semibold uppercase text-slate-300 mb-1.5">Full Name *</label>
+                    <input 
+                      type="text" 
+                      id="contact-name" 
+                      required 
+                      placeholder="e.g. Eleanor Vance" 
+                      class="w-full bg-slate-900/90 border border-slate-700/80 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="contact-email" class="block text-xs font-semibold uppercase text-slate-300 mb-1.5">Corporate Email *</label>
+                    <input 
+                      type="email" 
+                      id="contact-email" 
+                      required 
+                      placeholder="e.g. e.vance@institution.com" 
+                      class="w-full bg-slate-900/90 border border-slate-700/80 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors"
+                    />
+                  </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="contact-org" class="block text-xs font-semibold uppercase text-slate-300 mb-1.5">Organization / Entity *</label>
+                    <input 
+                      type="text" 
+                      id="contact-org" 
+                      required 
+                      placeholder="e.g. Sovereign Energy Capital" 
+                      class="w-full bg-slate-900/90 border border-slate-700/80 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors"
+                    />
+                  </div>
+
+                  <div>
+                    <label for="inquiry-type" class="block text-xs font-semibold uppercase text-slate-300 mb-1.5">Primary Interest *</label>
+                    <select 
+                      id="inquiry-type" 
+                      class="w-full bg-slate-900/90 border border-slate-700/80 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors"
+                    >
+                      <option value="utility-scale" class="bg-slate-900 text-white">Utility-Scale Solar Project (50MW+)</option>
+                      <option value="commercial-industrial" class="bg-slate-900 text-white">Commercial & Industrial Solar (C&I)</option>
+                      <option value="epc-procurement" class="bg-slate-900 text-white">Turnkey EPC & Engineering Inquiry</option>
+                      <option value="storage-hybrid" class="bg-slate-900 text-white">Solar + BESS (Battery Energy Storage)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="project-scope" class="block text-xs font-semibold uppercase text-slate-300 mb-1.5">Estimated Scope or Capacity Target</label>
+                  <input 
+                    type="text" 
+                    id="project-scope" 
+                    placeholder="e.g. 150MW ground-mount, or 500+ acres land lease, or $50M allocation" 
+                    class="w-full bg-slate-900/90 border border-slate-700/80 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors"
+                  />
+                </div>
+
+                <div>
+                  <label for="contact-message" class="block text-xs font-semibold uppercase text-slate-300 mb-1.5">Project Overview / Key Requirements *</label>
+                  <textarea 
+                    id="contact-message" 
+                    rows="4" 
+                    required 
+                    placeholder="Provide details on project location, timeline, off-take targets, or partnership objectives..." 
+                    class="w-full bg-slate-900/90 border border-slate-700/80 rounded-lg px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors"
+                  ></textarea>
+                </div>
+
+                <div class="flex items-center gap-2 pt-2">
+                  <input type="checkbox" id="nda-check" class="rounded bg-slate-800 border-slate-700 text-amber-500 focus:ring-amber-400 w-4 h-4">
+                  <label for="nda-check" class="text-xs text-slate-400">Request mutual NDA execution prior to sharing confidential telemetry or project data</label>
+                </div>
+
+                <button type="submit" class="btn-primary w-full text-base py-3.5 mt-4">
+                  <span>Submit Inquiry to TERREX Deal Desk</span>
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </button>
+              </form>
+
+              <!-- Inline Confirmation Alert (Hidden by default) -->
+              <div id="form-feedback" class="hidden mt-6 p-4 rounded-xl bg-emerald-950/80 border border-emerald-500/50 text-emerald-300 text-sm">
+                <div class="flex items-center gap-2 font-bold mb-1">
+                  <svg class="w-5 h-5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <span>Inquiry Successfully Transmitted</span>
+                </div>
+                <p class="text-xs text-emerald-400/90">
+                  Thank you for reaching out to TERREX. Your project submission has been routed to our technical and capital evaluation team. An energy director will contact you within 24 business hours.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       CORPORATE FOOTER (Sitemap, Legal, ESG Disclaimers, Copyright)
+       ========================================================================= -->
+  <footer class="bg-obsidian border-t border-slate-900 text-slate-400 text-sm py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-2 md:grid-cols-12 gap-8 pb-12 border-b border-slate-900">
+        
+        <!-- Brand Info -->
+        <div class="col-span-2 md:col-span-4">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-7 h-7 rounded bg-amber-500 flex items-center justify-center text-slate-950 font-black text-xs">T</div>
+            <span class="font-heading font-extrabold text-white text-lg tracking-wider">TERREX.</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm mb-4">
+            Accelerating the global transition to clean power through utility-scale solar generation, bankable project origination, and institutional-grade EPC execution.
+          </p>
+          <div class="text-xs font-mono text-slate-500">
+            Headquarters: [Global Energy District • Energy Way Alpha]
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="col-span-1 md:col-span-2">
+          <h4 class="text-xs font-bold uppercase text-white font-mono tracking-wider mb-3">Solutions</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#solutions" class="hover:text-amber-400 transition-colors">Utility Solar Power</a></li>
+            <li><a href="#solutions" class="hover:text-amber-400 transition-colors">Project Development</a></li>
+            <li><a href="#solutions" class="hover:text-amber-400 transition-colors">Turnkey EPC Delivery</a></li>
+            <li><a href="#solutions" class="hover:text-amber-400 transition-colors">Clean Energy Capital</a></li>
+            <li><a href="#solutions" class="hover:text-amber-400 transition-colors">BESS Energy Storage</a></li>
+          </ul>
+        </div>
+
+        <div class="col-span-1 md:col-span-2">
+          <h4 class="text-xs font-bold uppercase text-white font-mono tracking-wider mb-3">Company</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#about" class="hover:text-amber-400 transition-colors">About TERREX</a></li>
+            <li><a href="#why-terrex" class="hover:text-amber-400 transition-colors">Why Terrex</a></li>
+            <li><a href="#projects" class="hover:text-amber-400 transition-colors">Projects Showcase</a></li>
+            <li><a href="#sustainability" class="hover:text-amber-400 transition-colors">Sustainability & ESG</a></li>
+            <li><a href="#insights" class="hover:text-amber-400 transition-colors">Market Insights</a></li>
+          </ul>
+        </div>
+
+        <div class="col-span-1 md:col-span-2">
+          <h4 class="text-xs font-bold uppercase text-white font-mono tracking-wider mb-3">Partnerships</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#partnerships" class="hover:text-amber-400 transition-colors">Institutional Investors</a></li>
+            <li><a href="#partnerships" class="hover:text-amber-400 transition-colors">Landowner Leases</a></li>
+            <li><a href="#partnerships" class="hover:text-amber-400 transition-colors">Utility Off-takers</a></li>
+            <li><a href="#partnerships" class="hover:text-amber-400 transition-colors">Co-Development JV</a></li>
+            <li><a href="#contact" class="hover:text-amber-400 transition-colors">Submit Land Parcel</a></li>
+          </ul>
+        </div>
+
+        <div class="col-span-1 md:col-span-2">
+          <h4 class="text-xs font-bold uppercase text-white font-mono tracking-wider mb-3">Governance</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#contact" class="hover:text-amber-400 transition-colors">Compliance & Ethics</a></li>
+            <li><a href="#contact" class="hover:text-amber-400 transition-colors">Health & Safety Policy</a></li>
+            <li><a href="#contact" class="hover:text-amber-400 transition-colors">Privacy Policy</a></li>
+            <li><a href="#contact" class="hover:text-amber-400 transition-colors">Terms of Service</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Legal & Disclaimer Bar -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2026 TERREX Renewable Energy Group. All rights reserved. “Powering a Cleaner Tomorrow.”</p>
+        <p class="text-center md:text-right font-mono text-[11px]">
+          Confidential Placeholder Architecture • Designed with UI/UX Pro Max
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Application Logic Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

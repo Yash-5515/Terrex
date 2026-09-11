@@ -1,0 +1,12 @@
+# Operating System & Editor Files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+.vscode/
+.idea/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
