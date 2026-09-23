@@ -10,8 +10,11 @@
   <meta name="keywords" content="TERREX, solar power, renewable energy, EPC contractor, clean energy investment, utility solar, project development, commercial solar, decarbonization, ESG">
   <meta property="og:title" content="TERREX | Powering a Cleaner Tomorrow">
   <meta property="og:description" content="Institutional-grade solar development, EPC execution, and capital structuring for global clean-energy infrastructure.">
-  <meta property="og:type" content="website">
   <meta name="theme-color" content="#070B10">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/terrex-mark.png">
+  <link rel="apple-touch-icon" href="assets/terrex-mark.png">
 
   <!-- Tailwind CSS CDN with custom config -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -57,29 +60,12 @@
       <div class="flex items-center justify-between">
         
         <!-- Brand Logo -->
-        <a href="#hero" class="flex items-center gap-3 group focus-visible:outline-amber-400" aria-label="TERREX Home">
-          <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-400 via-amber-500 to-emerald-600 flex items-center justify-center p-0.5 shadow-lg shadow-amber-500/20 group-hover:shadow-amber-500/40 transition-shadow">
-            <div class="w-full h-full bg-obsidian rounded-[7px] flex items-center justify-center">
-              <!-- Geometric Solar Sunburst Icon -->
-              <svg class="w-6 h-6 text-amber-400 transform group-hover:rotate-45 transition-transform duration-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="4"/>
-                <path d="M12 2v2"/>
-                <path d="M12 20v2"/>
-                <path d="m4.93 4.93 1.41 1.41"/>
-                <path d="m17.66 17.66 1.41 1.41"/>
-                <path d="M2 12h2"/>
-                <path d="M20 12h2"/>
-                <path d="m6.34 17.66-1.41 1.41"/>
-                <path d="m19.07 4.93-1.41 1.41"/>
-              </svg>
-            </div>
-          </div>
-          <div class="flex flex-col">
-            <span class="text-xl font-extrabold tracking-wider font-heading text-white flex items-center gap-1">
-              TERREX<span class="text-amber-400">.</span>
-            </span>
-            <span class="text-[9px] uppercase tracking-widest text-slate-400 -mt-1 font-semibold">Renewable Energy</span>
-          </div>
+        <a href="#hero" class="flex items-center gap-3 group focus-visible:outline-amber-400 py-0.5" aria-label="TERREX Home">
+          <img 
+            src="assets/terrex-logo.png" 
+            alt="TERREX - Renewables Reinvented" 
+            class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.03] duration-300 drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
+          />
         </a>
 
         <!-- Desktop Navigation Links -->
@@ -119,10 +105,9 @@
     <!-- Mobile Drawer Overlay Menu -->
     <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-xl flex-col justify-between p-6">
       <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-md bg-amber-500 flex items-center justify-center text-slate-950 font-black">T</div>
-          <span class="font-heading font-extrabold text-white text-lg tracking-wider">TERREX</span>
-        </div>
+        <a href="#hero" class="mobile-nav-link flex items-center">
+          <img src="assets/terrex-logo.png" alt="TERREX - Renewables Reinvented" class="h-9 w-auto object-contain" />
+        </a>
         <button id="mobile-menu-close" type="button" class="p-2 rounded-lg text-slate-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-amber-400" aria-label="Close Navigation Menu">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
@@ -1333,10 +1318,9 @@
         
         <!-- Brand Info -->
         <div class="col-span-2 md:col-span-4">
-          <div class="flex items-center gap-2 mb-4">
-            <div class="w-7 h-7 rounded bg-amber-500 flex items-center justify-center text-slate-950 font-black text-xs">T</div>
-            <span class="font-heading font-extrabold text-white text-lg tracking-wider">TERREX.</span>
-          </div>
+          <a href="#hero" class="flex items-center gap-2 mb-4 inline-block">
+            <img src="assets/terrex-logo.png" alt="TERREX - Renewables Reinvented" class="h-10 w-auto object-contain" />
+          </a>
           <p class="text-xs text-slate-400 leading-relaxed max-w-sm mb-4">
             Accelerating the global transition to clean power through utility-scale solar generation, bankable project origination, and institutional-grade EPC execution.
           </p>
