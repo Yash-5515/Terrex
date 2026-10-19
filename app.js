@@ -378,3 +378,16 @@ function initAccordion() {
     });
   });
 }
+
+/**
+ * 9. GTM Dynamic Route & Virtual Pageview Tracking
+ */
+window.addEventListener('hashchange', () => {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'virtual_pageview',
+    page_path: window.location.pathname + window.location.hash,
+    page_title: document.title
+  });
+});
+
