@@ -1,5 +1,5 @@
-/**
- * TERREX Renewable Energy Corporate Portal
+﻿/**
+ * XELLTEC Renewable Energy Corporate Portal
  * Interactive Application Logic & UI/UX Behaviors
  */
 
